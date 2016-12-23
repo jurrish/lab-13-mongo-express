@@ -1,0 +1,22 @@
+{
+  "name": "lab-13-jr",
+  "version": "1.0.0",
+  "description": "lab-13",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "chai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurrish/lab-13-mongo-express.git"
+  },
+  "author": "JR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jurrish/lab-13-mongo-express/issues"
+  },
+  "homepage": "https://github.com/jurrish/lab-13-mongo-express#readme"
+}
