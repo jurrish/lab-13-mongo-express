@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/jurrish/lab-13-mongo-express/issues"
   },
-  "homepage": "https://github.com/jurrish/lab-13-mongo-express#readme"
+  "homepage": "https://github.com/jurrish/lab-13-mongo-express#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "debug": "^2.5.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.5",
+    "morgan": "^1.7.0"
+  }
 }
