@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "start": "DEBUG='recipe*' node server.js",
     "test": "chai"
   },
   "repository": {
