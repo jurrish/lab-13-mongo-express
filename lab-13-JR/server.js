@@ -6,6 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
 const recipeRouter = require('./route/recipe-route');
+const errorMiddleware = require('./lib/error-middleware');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/dev';
@@ -20,6 +21,7 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use(recipeRouter);
+app.use(errorMiddleware);
 
 const server = module.exports = app.listen(PORT, function(){
   debug(`server @ ${PORT}`);

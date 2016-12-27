@@ -25,3 +25,9 @@ recipeRouter.put('/api/recipe/:id', jsonParser, function(req, res, next) {
   .then(recipe => res.json(recipe))
   .catch(next);
 });
+
+recipeRouter.delete('/api/recipe/:id', function(req, res, next) {
+  Recipe.findByIdAndRemove(req.params.id)
+  .then(() => res.sendStatus(204))
+  .catch(next);
+});
