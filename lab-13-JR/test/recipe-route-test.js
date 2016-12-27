@@ -51,7 +51,7 @@ describe('testing route /api/recipe', function(){
         done();
       });
     });
-    describe('has valid body', function(){
+    describe('has valid body', () => {
       after(done => {
         delete testRecipe.timestamp;
         if(this.testRecipe){
