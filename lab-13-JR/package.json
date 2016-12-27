@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "DEBUG='recipe*' node server.js",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "DEBUG='note*'./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
