@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "DEBUG='recipe*' node server.js",
-    "test": "chai"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
     "express": "^4.14.0",
     "mongoose": "^4.7.5",
     "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "superagent": "^3.3.1"
   }
 }
