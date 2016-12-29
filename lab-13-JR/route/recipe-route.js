@@ -3,6 +3,7 @@
 const Router = require('express').Router;
 const jsonParser = require('body-parser').json();
 const Recipe = require('../model/recipe');
+const Cookbook = require('../model/cookbook');
 
 const recipeRouter = module.exports = new Router();
 
