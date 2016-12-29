@@ -21,7 +21,7 @@ recipeRouter.get('/api/recipe/:id', function(req, res, next) {
 });
 
 recipeRouter.get('/api/recipe', function(req, res, next) {
-  Recipe.find().toArray() //this is happening synchronously and toArray is trying to work with something that isn't done yet. Promisify, or use toArray() as a cb function? 
+  Recipe.find().toArray() //this is happening synchronously and toArray is trying to work with something that isn't done yet. Promisify, or use toArray() as a cb function?
   .then(recipe => res.json(recipe))
   .catch(next);
 });
