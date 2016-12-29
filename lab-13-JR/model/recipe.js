@@ -11,6 +11,7 @@ const recipeSchema = Schema({
   //name is REQUIRED since we made it required.
   ingredients: String,
   // id: ObjectId(),
+  objId: {type: mongoose.Schema.ObjectId, ref: 'cookbook'}
 });
 
 module.exports = mongoose.model('recipe', recipeSchema);
