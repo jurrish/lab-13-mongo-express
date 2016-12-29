@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const ingredientSchema = Schema({
   name: {type: String, required: true},
   pageLength: {type: Number},
-  objId: {type: mongoose.Schema.ObjectId, ref: 'recipe'}
+  objId: {type: mongoose.Schema.ObjectId, ref: 'recipes'}
 });
 
 module.exports = mongoose.model('ingredient', ingredientSchema);

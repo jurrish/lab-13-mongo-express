@@ -11,7 +11,7 @@ const recipeSchema = Schema({
   //name is REQUIRED since we made it required.
   region: String,
   // id: ObjectId(),
-  objId: {type: mongoose.Schema.ObjectId, ref: 'ingredient'}
+  objId: {type: mongoose.Schema.ObjectId, ref: 'ingredients'}
 });
 
 module.exports = mongoose.model('recipe', recipeSchema);

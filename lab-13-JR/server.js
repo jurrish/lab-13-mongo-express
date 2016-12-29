@@ -15,7 +15,10 @@ const debug = require('debug')('recipe:server');
 
 //ask about module caching!!!
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI).then(() => {
+  require('./seeds/ingredient-seeds')();
+});
+
 
 app.use(morgan('dev'));
 app.use(cors());
@@ -26,6 +29,7 @@ app.use(errorMiddleware);
 const server = module.exports = app.listen(PORT, function(){
   debug(`server @ ${PORT}`);
 });
+
 
 server.isRunning = true;
 
