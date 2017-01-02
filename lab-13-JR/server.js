@@ -6,6 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
 const recipeRouter = require('./route/recipe-route');
+const ingredientRouter = require('./route/ingredient-route');
 const errorMiddleware = require('./lib/error-middleware');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +17,8 @@ const debug = require('debug')('recipe:server');
 //ask about module caching!!!
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI).then(() => {
-  require('./seeds/ingredient-seeds')();
+  // mongoose.connection.db.dropCollection('ingredients')
+  // .then(require('./seeds/ingredient-seeds')());
 });
 
 
@@ -24,6 +26,7 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use(recipeRouter);
+app.use(ingredientRouter);
 app.use(errorMiddleware);
 
 const server = module.exports = app.listen(PORT, function(){
