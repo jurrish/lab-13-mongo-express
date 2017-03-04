@@ -49,3 +49,17 @@ ingredientRouter.put('/api/ingredient/:id', jsonParser, (req, res, next) => {
   .then(newIngredient => res.send(newIngredient))
   .catch(err => next(err));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+//create unauthed GET user/:id/reviews inside user-routes to get ALL user's reviews
